@@ -17,34 +17,19 @@ const Home: NextPage = () => {
           Sklep.<a href="https://nextjs.org">PartnerSoft.pl</a>
         </h1>
 
-        <p className={styles.description}>Wybierz odpowiednią kategorie</p>
+        <p className={styles.description}>Wybierz odpowiedni program</p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
+          <a href="#" className={styles.card}>
             <h2>Norma &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href="#" className={styles.card}>
             <h2>Rodos &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Etiam vitae diam ex. Vestibulum sollicitudin nec magna in
+              efficitur.
             </p>
           </a>
         </div>
@@ -56,10 +41,7 @@ const Home: NextPage = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          PartnerSoft.pl
         </a>
       </footer>
     </div>
