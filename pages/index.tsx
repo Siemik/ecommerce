@@ -217,9 +217,9 @@ function classNames(...classes: any) {
 
 const Home = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-100">
       <header>
-        <Popover className="relative bg-white">
+        <Popover className="relative bg-gray-100">
           <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a href="#">
@@ -241,7 +241,7 @@ const Home = () => {
                     <Popover.Button
                       className={classNames(
                         open ? "text-gray-900" : "text-gray-500",
-                        "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                        "group bg-grey-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
                       )}
                     >
                       <span>Szkolenie</span>
@@ -300,7 +300,7 @@ const Home = () => {
                 href="#"
                 className="text-base font-medium text-gray-500 hover:text-gray-900"
               >
-                E-learning
+                E-Learning
               </a>
               <a
                 href="#"
