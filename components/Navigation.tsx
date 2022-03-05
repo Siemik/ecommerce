@@ -1,4 +1,5 @@
 import Link from "next/link"
+import NavLink from "./NavLink"
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import {
@@ -129,11 +130,10 @@ function Navigation() {
             >
               E-Learning
             </a>
-            <Link href="/shop" passHref>
-              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Oprogramowanie
-              </a>
-            </Link>
+            <NavLink href="/shop">
+              <a>Oprogramowanie</a>
+            </NavLink>
+
             <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
