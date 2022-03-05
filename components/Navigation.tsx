@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import {
@@ -48,11 +49,11 @@ function Navigation() {
       <Popover className="relative bg-gray-100">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <strong className="text-2xl">
+            <Link href="/" passHref>
+              <a className="text-2xl font-bold">
                 Partner<span className="text-sky-600">Soft.pl</span>
-              </strong>
-            </a>
+              </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
@@ -128,12 +129,11 @@ function Navigation() {
             >
               E-Learning
             </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Oprogramowanie
-            </a>
+            <Link href="/shop" passHref>
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Oprogramowanie
+              </a>
+            </Link>
             <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
@@ -160,9 +160,11 @@ function Navigation() {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <strong className="text-2xl">
-                      Partner<span className="text-sky-600">Soft.pl</span>
-                    </strong>
+                    <Link href="/" passHref>
+                      <a className="text-2xl font-bold">
+                        Partner<span className="text-sky-600">Soft.pl</span>
+                      </a>
+                    </Link>
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
@@ -198,12 +200,11 @@ function Navigation() {
                   >
                     E-Learning
                   </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Oprogramowanie
-                  </a>
+                  <Link href="/shop">
+                    <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Oprogramowanie
+                    </a>
+                  </Link>
                   <a
                     href="#"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
