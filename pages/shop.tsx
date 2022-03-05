@@ -3,34 +3,34 @@ import Footer from "../components/Footer"
 
 const categories = [
   {
-    name: "New Arrivals",
+    name: "Norma",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-01.jpg",
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-01.jpg",
+    imageAlt:
+      "Brown leather key ring with brass metal loops and rivets on wood table.",
+    description:
+      "Keep your phone, keys, and wallet together, so you can lose everything at once.",
   },
   {
-    name: "Productivity",
+    name: "Rodos",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-02.jpg",
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-02.jpg",
+    imageAlt:
+      "Natural leather mouse pad on white desk next to porcelain mug and keyboard.",
+    description:
+      "The rest of the house will still be a mess, but your desk will look great.",
   },
   {
-    name: "Workspace",
+    name: "Cenniki",
     href: "#",
     imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-04.jpg",
-  },
-  {
-    name: "Accessories",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-05.jpg",
-  },
-  {
-    name: "Sale",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg",
+      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg",
+    imageAlt:
+      "Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.",
+    description:
+      "Be more productive than enterprise project managers with a single piece of paper.",
   },
 ]
 
@@ -41,57 +41,40 @@ const Home = () => {
 
       <main>
         <div className="bg-white">
-          <div className="py-16 sm:py-24 xl:max-w-7xl xl:mx-auto xl:px-8">
-            <div className="px-4 sm:px-6 sm:flex sm:items-center sm:justify-between lg:px-8 xl:px-0">
-              <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
-                Shop by Category
-              </h2>
-              <a
-                href="#"
-                className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
-              >
-                Browse all categories<span aria-hidden="true"> &rarr;</span>
-              </a>
-            </div>
+          <div className="max-w-xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
+              Czego szukasz?
+            </h2>
+            <p className="mt-4 text-base text-gray-500">
+              Posiadamy oprogramowanie oraz cenniki od liderów na rynku
+              oprogramowania dla kosztorystanów.
+            </p>
 
-            <div className="mt-4 flow-root">
-              <div className="-my-2">
-                <div className="box-content py-2 relative h-80 overflow-x-auto xl:overflow-visible">
-                  <div className="absolute min-w-screen-xl px-4 flex space-x-8 sm:px-6 lg:px-8 xl:relative xl:px-0 xl:space-x-0 xl:grid xl:grid-cols-5 xl:gap-x-8">
-                    {categories.map((category) => (
-                      <a
-                        key={category.name}
-                        href={category.href}
-                        className="relative w-56 h-80 rounded-lg p-6 flex flex-col overflow-hidden hover:opacity-75 xl:w-auto"
-                      >
-                        <span aria-hidden="true" className="absolute inset-0">
-                          <img
-                            src={category.imageSrc}
-                            alt=""
-                            className="w-full h-full object-center object-cover"
-                          />
-                        </span>
-                        <span
-                          aria-hidden="true"
-                          className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-gray-800 opacity-50"
-                        />
-                        <span className="relative mt-auto text-center text-xl font-bold text-white">
-                          {category.name}
-                        </span>
-                      </a>
-                    ))}
+            <div className="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
+              {categories.map((category) => (
+                <a
+                  key={category.name}
+                  href={category.href}
+                  className="group block"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
+                  >
+                    <img
+                      src={category.imageSrc}
+                      alt={category.imageAlt}
+                      className="w-full h-full object-center object-cover"
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 px-4 sm:hidden">
-              <a
-                href="#"
-                className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500"
-              >
-                Browse all categories<span aria-hidden="true"> &rarr;</span>
-              </a>
+                  <h3 className="mt-4 text-base font-semibold text-gray-900">
+                    {category.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-500">
+                    {category.description}
+                  </p>
+                </a>
+              ))}
             </div>
           </div>
         </div>
