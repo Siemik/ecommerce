@@ -14,7 +14,7 @@ function Hero() {
               alt="People working on laptops"
               layout="fill"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-sky-700 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-sky-800 mix-blend-multiply" />
           </div>
           <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
             <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -23,7 +23,7 @@ function Hero() {
               </span>
               <span className="block text-sky-200">kosztorystanta</span>
             </h1>
-            <p className="mt-6 max-w-lg mx-auto text-center text-xl text-sky-200 sm:max-w-3xl">
+            <p className="mt-6 max-w-lg mx-auto text-center text-xl text-sky-100 sm:max-w-3xl">
               Zostań produktywnym kosztorystanem/tką. Poruszaj się sprawnie po
               programie, stosuj najlepsze praktyki. Zoszczędź czas oraz unikaj
               potencjalnych błędów, które mogą kosztować{" "}
