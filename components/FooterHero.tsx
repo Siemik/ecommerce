@@ -4,7 +4,7 @@ function FooterHero() {
       <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:flex lg:items-center lg:justify-between">
         <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           <span className="block">Gotów by zwiększyć swoje kompentecje?</span>
-          <span className="block bg-gradient-to-r from-blue-600 to-sky-600 bg-clip-text text-transparent">
+          <span className="block bg-gradient-to-r from-blue-600 to-sky-600 bg-clip-text text-transparent pb-1">
             Poznaj szczegóły naszej oferty
           </span>
         </h2>
