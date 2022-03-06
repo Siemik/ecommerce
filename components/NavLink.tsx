@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import Link from "next/link"
-import React, { Children, VFC } from "react"
+import React, { Children, FC } from "react"
 
 interface Props {
   children: JSX.Element | JSX.Element[]
@@ -9,7 +9,7 @@ interface Props {
   href: string
 }
 
-const NavLink: VFC<Props> = ({
+const NavLink: FC<Props> = ({
   children,
   className,
   activeClassName,
