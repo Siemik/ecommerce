@@ -1,12 +1,12 @@
 import Navigation from "../../components/Navigation"
 import Footer from "../../components/Footer"
+import Image from "next/image"
 
 const categories = [
   {
     name: "Norma",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-01.jpg",
+    imageSrc: "/shop-img.jpg",
     imageAlt:
       "Brown leather key ring with brass metal loops and rivets on wood table.",
     description:
@@ -15,8 +15,7 @@ const categories = [
   {
     name: "Rodos",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-02.jpg",
+    imageSrc: "/shop-img.jpg",
     imageAlt:
       "Natural leather mouse pad on white desk next to porcelain mug and keyboard.",
     description:
@@ -25,8 +24,7 @@ const categories = [
   {
     name: "Cenniki",
     href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-01-collection-03.jpg",
+    imageSrc: "/shop-img.jpg",
     imageAlt:
       "Person placing task list card into walnut card holder next to felt carrying case on leather desk pad.",
     description:
@@ -61,9 +59,10 @@ const Home = () => {
                     aria-hidden="true"
                     className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6"
                   >
-                    <img
+                    <Image
                       src={category.imageSrc}
                       alt={category.imageAlt}
+                      layout="fill"
                       className="w-full h-full object-center object-cover"
                     />
                   </div>
