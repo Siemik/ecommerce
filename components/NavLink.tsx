@@ -20,7 +20,6 @@ const NavLink = ({ children, className, activeClassName, ...props }: Props) => {
     <Link {...props} passHref>
       {React.cloneElement(child, {
         className: classes || null,
-        children,
       })}
     </Link>
   )
