@@ -14,28 +14,28 @@ import { ChevronDownIcon } from "@heroicons/react/solid"
 
 const solutions = [
   {
-    name: "Norma Pro",
-    description: "Nowoczesne oprogramowanie dostarczone przez AthenaSoft",
-    href: "#",
+    name: "Szkolenia",
+    description:
+      "Kilkudniowe szkolenie z wybranego oprogramowania. Najpopularniejsza opcja.",
+    href: "/szkolenie",
     icon: InboxIcon,
   },
   {
-    name: "Rodos",
-    description: "Popularna opcja wśród ekonomicznych klientów",
-    href: "#",
+    name: "Konsultacje",
+    description: "Kilku godzinne konsultacje online.",
+    href: "/szkolenie/konsultacje",
     icon: AnnotationIcon,
   },
   {
-    name: "Specjalistyczne",
-    description: "Szkolenia branżowe współprowadzone przez specjalistów.",
-    href: "#",
+    name: "Zamknietę",
+    description: "Dla klientów korporacyjnych",
+    href: "/szkolenie/grupyzamkniete",
     icon: ChatAlt2Icon,
   },
   {
-    name: "Norma Pro",
-    description:
-      "Tradycyjna wersja oprogramowania produkowana przez AthenaSoft",
-    href: "#",
+    name: "e-Learning",
+    description: "Kurs wideo. Ekonomiczna opcja dla samouków.",
+    href: "/szkolenie/e-learning",
     icon: QuestionMarkCircleIcon,
   },
 ]
@@ -69,7 +69,7 @@ function Navigation() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group bg-grey-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
+                      "group bg-gray-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500"
                     )}
                   >
                     <span>Szkolenie</span>
@@ -95,26 +95,29 @@ function Navigation() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
                           {solutions.map((item) => (
-                            <a
+                            <NavLink
                               key={item.name}
                               href={item.href}
                               className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                              activeClassName="bg-gray-50"
                             >
-                              <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-blue-600 to-sky-600 text-white sm:h-12 sm:w-12">
-                                <item.icon
-                                  className="h-6 w-6"
-                                  aria-hidden="true"
-                                />
-                              </div>
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
+                              <a>
+                                <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-blue-600 to-sky-600 text-white sm:h-12 sm:w-12">
+                                  <item.icon
+                                    className="h-6 w-6"
+                                    aria-hidden="true"
+                                  />
+                                </div>
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                  <p className="mt-1 text-sm text-gray-500">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </a>
+                            </NavLink>
                           ))}
                         </div>
                       </div>
@@ -124,26 +127,28 @@ function Navigation() {
               )}
             </Popover>
 
-            <a
-              href="#"
+            <NavLink
+              href="/aktualnosci"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
+              activeClassName="text-gray-900 hover:text-gray-900"
             >
-              E-Learning
-            </a>
+              <a>Aktualności</a>
+            </NavLink>
             <NavLink
               href="/sklep"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
-              activeClassName="text-gray-900 hover:text-gray-700 underline underline-offset-2"
+              activeClassName="text-gray-900 hover:text-gray-900"
             >
               <a>Oprogramowanie</a>
             </NavLink>
 
-            <a
-              href="#"
+            <NavLink
+              href="/kontakt"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
+              activeClassName="text-gray-900 hover:text-gray-900"
             >
-              Kontakt
-            </a>
+              <a>Kontakt</a>
+            </NavLink>
           </Popover.Group>
         </div>
 
@@ -180,41 +185,48 @@ function Navigation() {
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
                     {solutions.map((item) => (
-                      <a
+                      <NavLink
                         key={item.name}
                         href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50 text-gray-700"
+                        activeClassName="bg-gray-50 text-black"
                       >
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-blue-600 to-sky-600 text-white">
-                          <item.icon className="h-6 w-6" aria-hidden="true" />
-                        </div>
-                        <div className="ml-4 text-base font-medium text-gray-900">
-                          {item.name}
-                        </div>
-                      </a>
+                        <a>
+                          <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-blue-600 to-sky-600 text-white">
+                            <item.icon className="h-6 w-6" aria-hidden="true" />
+                          </div>
+                          <div className="ml-4 text-base font-medium">
+                            {item.name}
+                          </div>
+                        </a>
+                      </NavLink>
                     ))}
                   </nav>
                 </div>
               </div>
               <div className="py-6 px-5">
                 <div className="grid grid-cols-2 gap-4">
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                  <NavLink
+                    href="/sklep"
+                    className="text-base font-medium text-gray-700 hover:text-gray-900"
+                    activeClassName="text-black hover:text-black"
                   >
-                    E-Learning
-                  </a>
-                  <Link href="/sklep">
-                    <a className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Oprogramowanie
-                    </a>
-                  </Link>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    <a>Oprogramowanie</a>
+                  </NavLink>
+                  <NavLink
+                    href="/aktualnosci"
+                    className="text-base font-medium text-gray-700 hover:text-gray-900"
+                    activeClassName="text-black hover:text-black"
                   >
-                    Kontakt
-                  </a>
+                    <a>Aktualności</a>
+                  </NavLink>
+                  <NavLink
+                    href="/kontakt"
+                    className="text-base font-medium text-gray-700 hover:text-gray-900"
+                    activeClassName="text-black hover:text-black"
+                  >
+                    <a>Kontakt</a>
+                  </NavLink>
                 </div>
               </div>
             </div>
