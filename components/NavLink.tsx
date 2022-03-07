@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import Link from "next/link"
-import React, { Children, FC } from "react"
+import React, { Children } from "react"
 
 interface Props {
   children: JSX.Element | JSX.Element[]
@@ -9,15 +9,9 @@ interface Props {
   href: string
 }
 
-const NavLink: FC<Props> = ({
-  children,
-  className,
-  activeClassName,
-  ...props
-}) => {
+const NavLink = ({ children, className, activeClassName, ...props }: Props) => {
   const { asPath } = useRouter()
   const child = Children.only(children)
-  // const childClassName = child.props.className || ""
 
   const classes =
     asPath === props.href ? `${className} ${activeClassName}` : className
@@ -26,6 +20,7 @@ const NavLink: FC<Props> = ({
     <Link {...props} passHref>
       {React.cloneElement(child, {
         className: classes || null,
+        children,
       })}
     </Link>
   )
